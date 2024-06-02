@@ -1,0 +1,350 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background: white;
+}
+
+img{
+    width: 240px;
+}
+
+header{
+    width: 100%;
+    height: 70px;
+    background: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    margin: 0 auto;
+}
+
+.logo{
+    width: 120px;
+    margin-top: 10px;
+}
+
+nav .logo{
+    display: none;
+}
+
+nav ul{
+    display: flex;
+}
+
+nav ul li a{
+    color: white;
+    display: block;
+    margin: 0 2px;
+    font-weight: 600;
+    padding: 5px 20px;
+    transition: 0.2s;
+    border-radius: 30px;
+}
+
+nav ul li a:hover{
+    background: rgb(38, 38, 38);
+}
+
+nav ul li a.active{
+    background: palegoldenrod;
+    color: black;
+}
+
+.hamburger{
+    display: none;
+    height: fit-content;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: 0.2s;
+}
+
+.hamburger:hover{
+    background: black;
+}
+
+.hamburger div{
+    width: 30px;
+    height: 3px;
+    margin: 5px 0;
+    background: white;
+}
+
+
+.section .card-container {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+}
+.card {
+    width: 80vw;
+    padding: 20px;
+    margin: 40px;
+    background-color: black;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.card-title {
+    color: white;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.card .img{
+    width: 35vw;
+    aspect-ratio: 16 / 9;
+}
+
+.card-description {
+    color: white;
+    margin-bottom: 20px;
+}
+
+.card-price {
+    color: white;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.card-button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    background-color: #4CAF50;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* footer */
+footer{
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 50px 100px;
+    background: black;
+}
+
+footer .footer-content{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 8fr 3fr 1fr 1fr;
+    grid-gap: 20px;
+}
+
+footer .footer-content .sc h2{
+    position: relative;
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+footer .footer-content .sc p{
+    color: rgb(200, 197, 197);
+}
+
+footer .footer-content .socmed{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(4,50px);
+}
+
+footer .footer-content .socmed li{
+    list-style: none;
+}
+footer .footer-content .socmed li a{
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    background: white;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    text-decoration: none;
+    border-radius: 20px;
+}
+
+footer .footer-content .socmed li a i{
+    color: black;
+    font-size: 20px;
+}
+
+footer .footer-content .quicklinks{
+    position: relative;
+}
+
+footer .footer-content .quicklinks ul li{
+    list-style: none;
+}
+
+footer .footer-content .quicklinks ul li a{
+    color: rgb(200, 197, 197);
+    text-decoration: none;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+footer .footer-content .contact .info{
+    position: relative;
+}
+
+footer .footer-content .contact .info li{
+    display: grid;
+    grid-template-columns: 30px 1fr;
+    margin-bottom: 16px;
+}
+
+footer .footer-content .contact .info li span{
+    color: rgb(200, 197, 197);
+    font-size: 20px;
+}
+
+footer .footer-content .contact .info li a{
+    color: rgb(200, 197, 197);
+    text-decoration: none;
+}
+
+.copyrightText{
+    width: 100%;
+    background: black;
+    padding: 20px 100px 30px;
+    text-align: center;
+    color: #fff;
+}
+/* end footer */
+
+@media only screen and (min-width: 1200px)
+{
+    header{
+        width: 100%;
+        padding: 0 20px;
+    }
+
+}
+
+@media only screen and (max-width: 768px)
+{
+    header{
+        width: 100%;
+        padding: 0 20px;
+    }
+    nav{
+        position: absolute;
+        left: -300px;
+        top: 0;
+        z-index: 999;
+        width: 280px;
+        height: 100vh;
+        background-color: black;
+        transition: 0.2s;
+        box-shadow: 2px 0 20px 0 rgba(0, 0, 0, 0.05);
+    }
+    #check-header:checked ~ nav{
+        left: 0;
+    }
+    nav .logo{
+        display: block;
+        height: 70px;
+        display: flex;
+        align-items: center;
+        margin-left: 30px;
+    }
+    nav ul li a{
+        margin-bottom: 5px;
+        padding: 10px 15px;
+        border-radius: 5px;
+    }
+    nav ul{
+        display: block;
+        padding: 0 20px;
+        margin-top: 30px;
+    }
+    .hamburger{
+        display: block;
+    }
+    
+    footer{
+        padding: 10px 50px;
+    }
+    footer .footer-content{
+        display: grid;
+        grid-template-columns: 2fr 2fr 2fr;
+        grid-gap: 15px;
+    }
+}
+
+@media only screen and (max-width: 500px)
+{
+    header{
+        width: 100%;
+        padding: 0 20px;
+    }
+    img{
+        width: 200px;
+    }
+    nav{
+        position: absolute;
+        left: -300px;
+        top: 0;
+        z-index: 999;
+        width: 280px;
+        height: 100vh;
+        background-color: black;
+        transition: 0.2s;
+        box-shadow: 2px 0 20px 0 rgba(0, 0, 0, 0.05);
+    }
+    #check-header:checked ~ nav{
+        left: 0;
+    }
+    nav .logo{
+        display: block;
+        height: 70px;
+        display: flex;
+        align-items: center;
+        margin-left: 30px;
+    }
+    nav ul li a{
+        margin-bottom: 5px;
+        padding: 10px 15px;
+        border-radius: 5px;
+    }
+    nav ul{
+        display: block;
+        padding: 0 20px;
+        margin-top: 30px;
+    }
+    .hamburger{
+        display: block;
+    }
+
+    
+    footer{
+        padding: 10px 50px;
+    }
+    footer .footer-content{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 10px;
+    }
+}   
